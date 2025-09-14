@@ -1,0 +1,108 @@
+html {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500; /* medium */
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+.hero {
+    width: 100%;
+    /* height: 100vh; */
+    padding-top: calc(var(--header-height) + 3rem);
+
+    &.hero--center {
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background: var(--gradient-primary);
+        overflow: hidden;
+    }
+}
+
+.section {
+    padding-top: var(--header-height);
+    padding-bottom: 4rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    outline: none;
+    border-radius: 1rem;
+    background-color: var(--color-background);
+    padding: 0 1.25rem;
+    height: 3.375rem;
+    width: 100%;
+
+    &::placeholder {
+        color: var(--color-body);
+        opacity: 0.5;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background-color: #f7f7f7;
+    }
+}
+
+.hidden-grid-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+
+    > * {
+        opacity: 0;
+        transition: opacity 0.2s 0.1s linear;
+    }
+
+    &.is-active {
+        grid-template-rows: 1fr;
+
+        > * {
+            opacity: 1;
+        }
+    }
+}
+
+.card {
+    .card__header {
+        position: absolute;
+        top: -3.75rem;
+        left: calc(50% - 3.75rem);
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-secondary);
+
+        &.card__header--interactive {
+            cursor: pointer;
+            transition: filter 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+
+            &:hover {
+                filter: brightness(0.93);
+            }
+        }
+    }
+}

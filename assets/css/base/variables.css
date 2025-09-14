@@ -1,0 +1,22 @@
+:root {
+    /* Colors */
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --color-background: #fff9f4;
+    --color-heading: #000000;
+    --color-body: #7a7475;
+    --color-primary: #fbda48;
+    --color-secondary: #daedd6;
+    --color-accent: #44a071;
+
+    /* Gradients */
+    --gradient-primary: radial-gradient(345.76% 130.18% at 98.72% 0%, #d2ca4e 0.18%, #44a071 45.45%, #138462 86.74%);
+
+    /* Sizes */
+    --container-width: 75rem;
+    --header-height: 4rem;
+
+    @media (min-width: 64rem) {
+        /* --header-height: 6.5rem; */
+    }
+}
