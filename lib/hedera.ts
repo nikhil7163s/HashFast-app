@@ -39,8 +39,8 @@ export class HederaService {
     private appMetadata = {
         name: "HashFast",
         description: "HashFast Payments",
-        icons: ["https://www.hashfast.app/app-icon.svg"],
-        url: "https://www.hashfast.app",
+        icons: ["https://www.hashfast.xyz/app-icon.svg"],
+        url: "https://www.hashfast.xyz",
     };
 
     private hashconnect: HashConnect;
@@ -68,7 +68,7 @@ export class HederaService {
         //create the hashconnect instance
         this.hashconnect = new HashConnect(
             LedgerId.TESTNET,
-            "b8b1efb6a5dc745fcde127bf04d22506",
+            "1b5c085ded8e7393b1f14c08f7226b5f",
             this.appMetadata,
             false,
         );
