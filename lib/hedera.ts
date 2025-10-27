@@ -66,9 +66,9 @@ export class HederaService {
         }
 
         //create the hashconnect instance
-        const ledgerId = config.public.hederaNetwork === "mainnet" ? LedgerId.MAINNET : LedgerId.TESTNET;
+        // const ledgerId = config.public.hederaNetwork === "mainnet" ? LedgerId.MAINNET : LedgerId.TESTNET;
         this.hashconnect = new HashConnect(
-            ledgerId,
+            LedgerId.MAINNET,
             "1b5c085ded8e7393b1f14c08f7226b5f",
             this.appMetadata,
             false,
