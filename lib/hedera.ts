@@ -53,7 +53,7 @@ export class HederaService {
         const config = useRuntimeConfig();
 
         // Initialize client based on network
-        if (config.public.hederaNetwork === "mainnet") {
+        if (config.public.hederaNetwork !== "testnet") {
             this.client = Client.forMainnet();
             this.network = "mainnet";
             this.networkUrl = "https://mainnet.mirrornode.hedera.com";
