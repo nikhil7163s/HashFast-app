@@ -39,9 +39,6 @@ export default defineNuxtConfig({
         experimental: {
             wasm: true,
         },
-        nodeOptions: {
-            "--no-warnings": true,
-        },
     },
     postcss: {
         plugins: {
